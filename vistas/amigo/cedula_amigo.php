@@ -85,7 +85,7 @@
 						placeholder="Cédula sin puntos ni comas"
 						required
 					>
-					<input type="submit" value="Entrar">
+					<input class="botonSiguiente" type="submit" value="Entrar">
 				</form>
 
 			</div>
