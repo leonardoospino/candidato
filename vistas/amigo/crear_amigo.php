@@ -31,6 +31,8 @@
 		}
 	</style>
 
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
 </head>
 
 <body>
@@ -40,11 +42,12 @@
 
 			<div class="login-box">
           <h2>Cédula: <?= $_GET['cedula'] ?></h2>
+          <h2 id="textoPais">COLOMBIA</h2>
           <p style="font-size: 22pt;">DIGITE:</p>
           <p id="cedula_verificada">---------</p>
 
           <form
-            action="../../controlador/amigo/guardar_datos_personales.php"
+            action="../../controlador/amigo/almacenar_amigo.php"
             method="post"
             autocomplete="off"
           >
@@ -76,12 +79,14 @@
 
             <select
               class="entradaFormulario"
+              id="selectPaises"
               name="pais"
             >
               <optgroup label="Selecciona un país:">
                 <?php foreach($paises as $p) { ?>
                   <option
-                    value="<?= $p['pais'] ?>"
+                    data-texto-pais="<?= $p['pais'] ?>"
+                    value="<?= $p['pais_cod'] ?>"
                     <?= ($p['pais'] === 'COLOMBIA')? 'selected' : '' ?>
                   >
                     <?= $p['pais'] ?> (<?= $p['indicativo_pais'] ?>)
@@ -119,23 +124,41 @@
               required
             >
 
+            <input class="botonSiguiente" id="abc" type="button" value="Peticion AJAX">
+
             <p style="font-size: 22pt;">Leer bien antes de grabar</p>
             <input class="botonSiguiente" id="guardarDatosPersonales" type="button" value="Siguiente">
           </div>
 
           <div id="direccion" class="ocultar">
             <!-- AQUI SE DEBEN CARGAR LOS CAMPOS DE DIRECCIONES -->
-
-
-
-            <h1 class="textoBlanco">AQUI SE DEBEN CARGAR LOS CAMPOS DE DIRECCIONES</h1>
+            <select
+              class="entradaFormulario"
+              id="selectDptos"
+              name="dpto"
+            >
+              <optgroup label="Selecciona un departamento:" >
+              </optgroup>
+            </select>
 
 
 
 
             <!-- AQUI SE DEBEN CARGAR LOS CAMPOS DE DIRECCIONES -->
             <p style="font-size: 22pt;">Leer bien antes de grabar</p>
-            <input class="botonSiguiente" id="guardarDireccion" type="button" value="Siguiente">
+            <input
+              class="botonSiguiente"
+              id="anteriorDireccion"
+              type="button"
+              value="Anterior"
+            >
+            &nbsp;&nbsp;
+            <input
+              class="botonSiguiente"
+              id="siguienteDireccion"
+              type="button"
+              value="Siguiente"
+            >
           </div>
         </form>
       </div>

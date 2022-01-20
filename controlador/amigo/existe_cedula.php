@@ -8,7 +8,7 @@ $consulta = "SELECT * FROM amigos WHERE cedula='$cedula'";
 $resultado = $conexion->query($consulta);
 
 if ($resultado->num_rows === 0) {
-  header("Location: ../../vistas/amigo/datos_personales.php?cedula=$cedula");
+  header("Location: ../../vistas/amigo/crear_amigo.php?cedula=$cedula");
 } else {
   header("Location: ../../vistas/amigo/existe_amigo.php?cedula=$cedula");
 }

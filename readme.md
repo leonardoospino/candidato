@@ -7,4 +7,25 @@
  - delete - operacion de borrado (fuerte o debil)
 
 
-## Otro título
+## Verbos mas usados HTTP/HTTPS
+ - POST
+ - GET
+ - PATCH
+ - DELETE
+
+## API: Application Programming Interface
+## AJAX - Asynchornous JAvascript Xtension
+ - JSON: JavaScript Object Notation
+  JSON Viewer Pro
+  Llave: valor
+  Llorar: Acción y efecto de llorar
+
+  {
+    "nombre": "Juan Camilo",
+    "apellidos": "Lopez Luna",
+    "edad": 15,
+    "vehiculo": {
+      tipo: "Moto",
+      placa: "ACF7UJ"
+    }
+  }
