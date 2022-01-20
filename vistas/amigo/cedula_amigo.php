@@ -73,7 +73,7 @@
 				<!-- EVITAR QUE LOS CAMPOS AUTCOMPLETEN -->
 				<!-- autocomplete="off -->
 				<form
-					action="cedula_otro.php"
+					action="../../controlador/amigo/existe_cedula.php"
 					method="POST"
 					autocomplete="off"
 				>
@@ -81,6 +81,7 @@
 						type="number"
 						name="cedula"
 						id="cedula"
+						class="entradaFormulario"
 						placeholder="Cédula sin puntos ni comas"
 						required
 					>
