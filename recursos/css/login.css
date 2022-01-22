@@ -104,3 +104,12 @@
 .ocultar {
   display: none;
 }
+
+.entradaFormularioNoEditable {
+  border: none;
+  background: transparent;
+  outline: none;
+  height: 100px;
+  color: gray;
+  font-size: 40px;
+}

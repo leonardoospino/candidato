@@ -89,7 +89,7 @@
                     value="<?= $p['pais_cod'] ?>"
                     <?= ($p['pais'] === 'COLOMBIA')? 'selected' : '' ?>
                   >
-                    <?= $p['pais'] ?> (<?= $p['indicativo_pais'] ?>)
+                    <?= utf8_encode($p['pais']) ?> (<?= $p['indicativo_pais'] ?>)
                   </option>
                 <?php } ?>
               </optgroup>
@@ -141,8 +141,32 @@
               </optgroup>
             </select>
 
+            <select
+              class="entradaFormulario"
+              id="selectMunicipios"
+              name="municipio"
+            >
+              <optgroup label="Selecciona un municipio:" >
+              </optgroup>
+            </select>
 
 
+            <select
+              class="entradaFormulario"
+              id="selectBarrios"
+              name="barrio"
+            >
+              <optgroup label="Selecciona un barrio:" >
+              </optgroup>
+            </select>
+
+            <textarea
+              class="entradaFormularioNoEditable"
+              row="10"
+              col="4"
+              id="comuna_loc"
+              disabled
+            >Comuna/Localidad: Popular ABC</textarea>
 
             <!-- AQUI SE DEBEN CARGAR LOS CAMPOS DE DIRECCIONES -->
             <p style="font-size: 22pt;">Leer bien antes de grabar</p>
