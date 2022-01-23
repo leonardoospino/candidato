@@ -42,9 +42,15 @@
 
 			<div class="login-box">
           <h2>Cédula: <?= $_GET['cedula'] ?></h2>
-          <h2 id="textoPais">COLOMBIA</h2>
+
+          <h2>
+            <span class="ocultar" id="textoPais">COLOMBIA</span><span class="ocultar" id="textoDpto"></span>
+          </h2>
+          <h2 class="ocultar" id="textoMunicipio"></h2>
           <p style="font-size: 22pt;">DIGITE:</p>
-          <p id="cedula_verificada">---------</p>
+          <hr/>
+          <br>
+          <br>
 
           <form
             action="../../controlador/amigo/almacenar_amigo.php"
@@ -124,13 +130,11 @@
               required
             >
 
-            <input class="botonSiguiente" id="abc" type="button" value="Peticion AJAX">
-
             <p style="font-size: 22pt;">Leer bien antes de grabar</p>
             <input class="botonSiguiente" id="guardarDatosPersonales" type="button" value="Siguiente">
           </div>
 
-          <div id="direccion" class="ocultar">
+          <div id="datosDireccion" class="ocultar">
             <!-- AQUI SE DEBEN CARGAR LOS CAMPOS DE DIRECCIONES -->
             <select
               class="entradaFormulario"
@@ -150,6 +154,7 @@
               </optgroup>
             </select>
 
+            <p style="font-size: 22pt;">Si no encuentras el barrio, escogia <b>Barrio no encontrado</b> y digita el barrio</p>
 
             <select
               class="entradaFormulario"
@@ -168,6 +173,22 @@
               disabled
             >Comuna/Localidad: Popular ABC</textarea>
 
+            <input
+              class="entradaFormulario ocultar"
+              type="text"
+              name="barrio_opcional"
+              placeholder="Barrio"
+              id="barrio_opcional"
+            >
+
+            <input
+              class="entradaFormulario"
+              type="text"
+              name="direccion"
+              placeholder="Dirección"
+              id="direccion"
+            >
+
             <!-- AQUI SE DEBEN CARGAR LOS CAMPOS DE DIRECCIONES -->
             <p style="font-size: 22pt;">Leer bien antes de grabar</p>
             <input
@@ -180,6 +201,26 @@
             <input
               class="botonSiguiente"
               id="siguienteDireccion"
+              type="button"
+              value="Siguiente"
+            >
+          </div>
+
+          <div
+            id="datosPuestoVotacion"
+            class="ocultar"
+          >
+
+            <input
+              class="botonSiguiente"
+              id="anteriorPuestoVotacion"
+              type="button"
+              value="Anterior"
+            >
+            &nbsp;&nbsp;
+            <input
+              class="botonSiguiente"
+              id="siguientePuestoVotacion"
               type="button"
               value="Siguiente"
             >
