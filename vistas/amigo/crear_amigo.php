@@ -211,6 +211,25 @@
             class="ocultar"
           >
 
+            <select
+              class="entradaFormulario"
+              id="selectPuestosVotacion"
+              name="puesto_votacion"
+            >
+              <optgroup label="Selecciona un puesto de votación:" >
+              </optgroup>
+            </select>
+
+            <h2>
+              <span id="textoSector"></span><br><span id="textoDireccionPuestoVotacion"></span>
+            </h2>
+
+            <br>
+
+            <h2>
+              CREAR SELECT DE NUMERO DE MESAS DE VOTACION
+            </h2>
+
             <input
               class="botonSiguiente"
               id="anteriorPuestoVotacion"

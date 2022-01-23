@@ -7,11 +7,15 @@ var textoPais = document.querySelector('#textoPais');
 var textoDpto = document.querySelector('#textoDpto');
 var textoMunicipio = document.querySelector('#textoMunicipio');
 var textoComunaLocalidad = document.querySelector('#comuna_loc');
+var textoSector = document.querySelector('#textoSector');
+var textoDireccionPuestoVotacion = document.querySelector('#textoDireccionPuestoVotacion');
+var textoMesa = document.querySelector('#textoMesa');
 
 var listaPaises = document.querySelector('#selectPaises');
 var listaDepartamentos = document.querySelector('#selectDptos');
 var listaMunicipios = document.querySelector('#selectMunicipios');
 var listaBarrios = document.querySelector('#selectBarrios');
+var listaPuestosVotacion = document.querySelector('#selectPuestosVotacion');
 
 var barrioOpcional = document.querySelector('#barrio_opcional');
 
@@ -107,6 +111,7 @@ function obtenerMunicipios(dpto_cod) {
       listaMunicipios.innerHTML = contenidoHtml;
 
       obtenerBarrios(listaMunicipios[listaMunicipios.selectedIndex].value);
+      obtenerPuestosVotacion(listaMunicipios[listaMunicipios.selectedIndex].value);
 
       textoMunicipio.innerText = listaMunicipios[listaMunicipios.selectedIndex].innerText;
     }
@@ -145,6 +150,46 @@ function obtenerBarrios(municipio_cod) {
     }
   });
 }
+
+function obtenerPuestosVotacion(municipio_cod) {
+ console.log(municipio_cod);
+  $.ajax({
+    url: `../../controlador/puestoVotacion/obtener_puestos_votacion_json.php?municipio_cod=${municipio_cod}`,
+    dataType: 'JSON',
+    success: function(puestosVotacion) {
+      var contenidoHtml = `<optgroup label="Selecciona un puesto de votación:" >`;
+      for (indice in puestosVotacion) {
+        contenidoHtml += (
+          `<option
+            value="${puestosVotacion[indice]['puesto_cod']}"
+            data-mesas-puesto="${puestosVotacion[indice]['mesas_puesto']}"
+            data-sector="${puestosVotacion[indice]['sector']}"
+            data-direccion-puesto-votacion="${puestosVotacion[indice]['direccion_puesto']}"
+          >${ puestosVotacion[indice]['puesto_de_votacion'] }</option>`
+        );
+      }
+      contenidoHtml += `</optgroup>`;
+      listaPuestosVotacion.innerHTML = contenidoHtml;
+      actualizarSectorYDireccionPuestoVotacion();
+    }
+  });
+}
+
+function actualizarSectorYDireccionPuestoVotacion() {
+  textoSector.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.sector;
+
+  textoDireccionPuestoVotacion.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.direccionPuestoVotacion;
+
+  textoMesa.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.mesasPuesto;
+
+}
+
+listaPuestosVotacion.addEventListener(
+  'change',
+  function() {
+    actualizarSectorYDireccionPuestoVotacion();
+  }
+);
 
 function alternarVisibilidadCampoBarrio() {
   if (listaBarrios[listaBarrios.selectedIndex].innerText == 'Barrio no encontrado') {
