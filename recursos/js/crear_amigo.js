@@ -152,7 +152,6 @@ function obtenerBarrios(municipio_cod) {
 }
 
 function obtenerPuestosVotacion(municipio_cod) {
- console.log(municipio_cod);
   $.ajax({
     url: `../../controlador/puestoVotacion/obtener_puestos_votacion_json.php?municipio_cod=${municipio_cod}`,
     dataType: 'JSON',
@@ -180,7 +179,7 @@ function actualizarSectorYDireccionPuestoVotacion() {
 
   textoDireccionPuestoVotacion.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.direccionPuestoVotacion;
 
-  textoMesa.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.mesasPuesto;
+  // textoMesa.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.mesasPuesto;
 
 }
 
@@ -202,7 +201,6 @@ function alternarVisibilidadCampoBarrio() {
 listaMunicipios.addEventListener(
   'change',
   function() {
-    // console.log(this.options[this.selectedIndex].value);
     obtenerBarrios(this.options[this.selectedIndex].value);
     textoMunicipio.innerText = listaMunicipios[listaMunicipios.selectedIndex].innerText;
   }
