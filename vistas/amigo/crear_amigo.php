@@ -227,8 +227,16 @@
             <br>
 
             <h2>
-              CREAR SELECT DE NUMERO DE MESAS DE VOTACION
+              Seleccionar la mesa de votación del 1 al <span id="textoMesa"></span>
             </h2>
+
+            <select
+              class="entradaFormulario selectPequeno"
+              id="selectMesas"
+              name="mesa"
+            ></select>
+
+            <br>
 
             <input
               class="botonSiguiente"

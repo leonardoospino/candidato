@@ -16,6 +16,7 @@ var listaDepartamentos = document.querySelector('#selectDptos');
 var listaMunicipios = document.querySelector('#selectMunicipios');
 var listaBarrios = document.querySelector('#selectBarrios');
 var listaPuestosVotacion = document.querySelector('#selectPuestosVotacion');
+var listaMesas = document.querySelector('#selectMesas');
 
 var barrioOpcional = document.querySelector('#barrio_opcional');
 
@@ -179,14 +180,32 @@ function actualizarSectorYDireccionPuestoVotacion() {
 
   textoDireccionPuestoVotacion.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.direccionPuestoVotacion;
 
-  // textoMesa.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.mesasPuesto;
+  textoMesa.innerText = listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.mesasPuesto;
 
+  generarDatosMesaNumero(parseInt(listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.mesasPuesto));
 }
+
+function generarDatosMesaNumero(mesasPuesto) {
+  var contenidoHtml = `<optgroup label="Selecciona un # de mesa:" >`;
+  for (indice = 1; indice <= mesasPuesto; indice++) {
+    contenidoHtml += (
+      `<option
+        value="${ indice }"
+      >${ indice }</option>`
+    );
+  }
+  contenidoHtml += `</optgroup>`;
+
+  listaMesas.innerHTML = contenidoHtml;
+}
+
+
 
 listaPuestosVotacion.addEventListener(
   'change',
   function() {
     actualizarSectorYDireccionPuestoVotacion();
+    generarDatosMesaNumero(parseInt(listaPuestosVotacion[listaPuestosVotacion.selectedIndex].dataset.mesasPuesto));
   }
 );
 
