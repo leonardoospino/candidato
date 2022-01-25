@@ -22,5 +22,5 @@ $conexion = new mysqli(
 );
 
 if ($conexion->connect_errno) {
-  die('Error de conexión a la BD');
+  die('<h1>Error de conexión a la BD</h1>');
 }

@@ -117,3 +117,31 @@
 .selectPequeno {
   width: 20% !important;
 }
+
+.opcionRadio {
+	display: flex;
+	justify-content: space-around;
+}
+
+.letraNormal {
+	font-weight: normal !important;
+}
+
+.opcionRadio h2 {
+  text-align: start !important;
+  width: 50% !important;
+  margin-top: 3px !important;
+	font-weight: normal;
+	font-size: 34px;
+}
+
+.opcionRadio label {
+  font-size: 34px;
+  color: #fff;
+}
+
+.entradaRadio {
+  height: 30px;
+  width: 30px;
+}
+

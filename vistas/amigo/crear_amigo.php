@@ -41,7 +41,8 @@
 		<div id="portada" align="center">
 
 			<div class="login-box">
-          <h2>Cédula: <?= $_GET['cedula'] ?></h2>
+          <h2>Mi cédula: <?= $_GET['cedula'] ?></h2>
+          <h2>Cédula líder: <?= $_GET['cedula_lider'] ?></h2>
 
           <h2>
             <span class="ocultar" id="textoPais">COLOMBIA</span><span class="ocultar" id="textoDpto"></span>
@@ -220,13 +221,13 @@
               </optgroup>
             </select>
 
-            <h2>
+            <h2 class="letraNormal">
               <span id="textoSector"></span><br><span id="textoDireccionPuestoVotacion"></span>
             </h2>
 
             <br>
 
-            <h2>
+            <h2 class="letraNormal">
               Seleccionar la mesa de votación del 1 al <span id="textoMesa"></span>
             </h2>
 
@@ -237,6 +238,97 @@
             ></select>
 
             <br>
+
+            <div class="opcionRadio">
+              <h2>¿Puede votar? </h2>
+
+              <label for="">
+                Si
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="puede_votar"
+                  id="puede_votar"
+                  value="Si"
+                >
+              </label>
+
+              <label for="">
+                No
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="puede_votar"
+                  id="puede_votar"
+                  value="No"
+                >
+
+              </label>
+            </div>
+
+            <div class="opcionRadio">
+              <h2>¿Es jurado? </h2>
+
+              <label for="">
+                Si
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="jurado"
+                  id="jurado"
+                  value="Si"
+                >
+              </label>
+
+              <label for="">
+                No
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="jurado"
+                  id="jurado"
+                  value="No"
+                >
+
+              </label>
+            </div>
+
+            <div class="opcionRadio">
+              <h2>¿Es testigo? </h2>
+
+              <label for="">
+                Si
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="testigo"
+                  id="testigo"
+                  value="Si"
+                >
+              </label>
+
+              <label for="">
+                No
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="testigo"
+                  id="testigo"
+                  value="No"
+                >
+
+              </label>
+            </div>
+
+            <div class="opcionRadio">
+              <input type="checkbox" name="" id="">
+              <h2>Acepto el <a href="../../terminos_condiciones.php" target="_blank">manejo de datos</a></h2>
+
+            </div>
+
+            <br>
+
+
 
             <input
               class="botonSiguiente"
@@ -249,7 +341,7 @@
               class="botonSiguiente"
               id="siguientePuestoVotacion"
               type="button"
-              value="Siguiente"
+              value="Registrarme"
             >
           </div>
         </form>
