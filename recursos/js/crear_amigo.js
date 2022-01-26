@@ -10,6 +10,9 @@ var textoComunaLocalidad = document.querySelector('#comuna_loc');
 var textoSector = document.querySelector('#textoSector');
 var textoDireccionPuestoVotacion = document.querySelector('#textoDireccionPuestoVotacion');
 var textoMesa = document.querySelector('#textoMesa');
+var textoTestigo = document.querySelector('#textoTestigo');
+var textoJurado = document.querySelector('#textoJurado');
+var textoPuedeVotar = document.querySelector('#textoPuedeVotar');
 
 var listaPaises = document.querySelector('#selectPaises');
 var listaDepartamentos = document.querySelector('#selectDptos');
@@ -20,12 +23,74 @@ var listaMesas = document.querySelector('#selectMesas');
 
 var barrioOpcional = document.querySelector('#barrio_opcional');
 
+var campoNombre = document.querySelector('#nombre');
+var campoApellidos = document.querySelector('#apellidos');
+var campoCelular = document.querySelector('#celular');
+var campoTelefono = document.querySelector('#telefono');
+var campoFechaNacimiento = document.querySelector('#fecha_nac');
+var campoBarrioOpcional = document.querySelector('#barrio_opcional');
+var campoDireccion = document.querySelector('#direccion');
+var campoVanejoDatosMarcable = document.querySelector('#manejoDatosMarcable');
+
+function validarDatosPersonales() {
+  var nombre = campoNombre.value.trim();
+  var apellidos = campoApellidos.value.trim();
+  var celular = campoCelular.value.trim();
+  var telefono = campoTelefono.value.trim();
+  var fechaNacimiento = campoFechaNacimiento.value.trim();
+
+  var datosValidos = true;
+
+  if (nombre.length == 0) {
+    datosValidos = false;
+    campoNombre.classList.add('error');
+  } else {
+    campoNombre.classList.remove('error');
+  }
+
+  if (apellidos.length == 0) {
+    datosValidos = false;
+    campoApellidos.classList.add('error');
+  } else {
+    campoApellidos.classList.remove('error');
+  }
+
+
+  if (celular.length >= 10) {
+    campoCelular.classList.remove('error');
+  } else {
+    datosValidos = false;
+    campoCelular.classList.add('error');
+  }
+
+  if ((telefono.length == 0) || (telefono.length >= 7)) {
+    campoTelefono.classList.remove('error');
+  } else {
+    datosValidos = false;
+    campoTelefono.classList.add('error');
+  }
+
+
+  if (fechaNacimiento.length == 0) {
+    datosValidos = false;
+    campoFechaNacimiento.classList.add('error');
+  } else {
+    campoFechaNacimiento.classList.remove('error');
+  }
+
+
+  return datosValidos;
+}
+
 document.querySelector('#guardarDatosPersonales').addEventListener(
   'click',
   function() {
-    contenedorDatosPersonales.classList.add('ocultar');
-    contenedorDireccion.classList.remove('ocultar');
-    textoPais.classList.remove('ocultar');
+    // validarDatosPersonales();
+    if (validarDatosPersonales()) {
+      contenedorDatosPersonales.classList.add('ocultar');
+      contenedorDireccion.classList.remove('ocultar');
+      textoPais.classList.remove('ocultar');
+    }
   }
 );
 
@@ -40,14 +105,37 @@ document.querySelector('#anteriorDireccion').addEventListener(
   anteriorDireccion
 );
 
+function validarDireccionDatos() {
+  var datosValidos = true;
+  if (listaBarrios[listaBarrios.selectedIndex].innerText == 'Barrio no encontrado') {
+    if (campoBarrioOpcional.value.trim().length == 0) {
+      campoBarrioOpcional.classList.add('error');
+      datosValidos = false;
+    } else {
+      campoBarrioOpcional.classList.remove('error');
+    }
+  }
+
+  if (campoDireccion.value.trim().length == 0) {
+    campoDireccion.classList.add('error');
+    datosValidos = false;
+  } else {
+    campoDireccion.classList.remove('error');
+  }
+
+  return datosValidos;
+}
 
 document.querySelector('#siguienteDireccion').addEventListener(
   'click',
   function() {
-    contenedorDireccion.classList.add('ocultar');
-    contenedorPuestoVotacion.classList.remove('ocultar');
-    textoDpto.classList.remove('ocultar');
-    textoMunicipio.classList.remove('ocultar');
+    // validarDireccionDatos();
+    if (validarDireccionDatos()) {
+      contenedorDireccion.classList.add('ocultar');
+      contenedorPuestoVotacion.classList.remove('ocultar');
+      textoDpto.classList.remove('ocultar');
+      textoMunicipio.classList.remove('ocultar');
+    }
   }
 );
 
@@ -59,7 +147,48 @@ document.querySelector('#anteriorPuestoVotacion').addEventListener(
     textoDpto.classList.add('ocultar');
     textoMunicipio.classList.add('ocultar');
   }
-)
+);
+
+function validarPuestoVotacionDatos() {
+  var datosValidos = true;
+
+  if (document.querySelector('#testigo:checked')) {
+    textoTestigo.classList.remove('errorTexto');
+  } else {
+    datosValidos = false;
+    textoTestigo.classList.add('errorTexto');
+  }
+
+  if (document.querySelector('#jurado:checked')) {
+    textoJurado.classList.remove('errorTexto');
+  } else {
+    datosValidos = false;
+    textoJurado.classList.add('errorTexto');
+  }
+
+  if (document.querySelector('#puede_votar:checked')) {
+    textoPuedeVotar.classList.remove('errorTexto');
+  } else {
+    datosValidos = false;
+    textoPuedeVotar.classList.add('errorTexto');
+  }
+
+  if (!manejoDatosMarcable.checked) {
+    datosValidos = false;
+  }
+
+  return datosValidos;
+}
+
+document.querySelector('#siguientePuestoVotacion').addEventListener(
+  'click',
+  function() {
+    if (validarPuestoVotacionDatos()) {
+      document.querySelector('#formularioCrearAmigo').submit();
+    }
+  }
+);
+
 
 function obtenerDptos(pais_cod) {
   $.ajax({

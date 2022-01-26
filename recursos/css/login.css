@@ -41,7 +41,7 @@
   background: transparent;
   outline: none;
   height: 50px;
-  color: gray;
+  color: white;
   font-size: 40px;
 }
 
@@ -92,13 +92,7 @@
 
 .textoBlanco {
   color: #fff !important;
-  background-color: red !important;
-}
-
-
-.textoBlanco {
-  color: #fff !important;
-  background-color: red !important;
+  color-scheme: dark;
 }
 
 .ocultar {
@@ -110,7 +104,7 @@
   background: transparent;
   outline: none;
   height: 100px;
-  color: gray;
+  color: white;
   font-size: 40px;
 }
 
@@ -145,3 +139,38 @@
   width: 30px;
 }
 
+.error {
+  color: yellow !important;
+  border-bottom: 2px solid yellow !important;
+}
+
+.errorTexto {
+  color: yellow !important;
+}
+
+.textoSuperior1 {
+  font-size: 40px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.texto30 {
+  font-size: 30px !important;
+}
+
+.manejoDatos {
+	display: flex;
+	justify-content: space-around;
+}
+
+.manejoDatos #manejoDatosMarcable {
+  -webkit-transform: scale(3);
+  margin-top: 35px;
+}
+
+#restanteTocaAqui {
+
+  font-size: 29px;
+  font-weight: normal;
+
+}

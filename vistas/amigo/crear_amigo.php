@@ -41,8 +41,7 @@
 		<div id="portada" align="center">
 
 			<div class="login-box">
-          <h2>Mi cédula: <?= $_GET['cedula'] ?></h2>
-          <h2>Cédula líder: <?= $_GET['cedula_lider'] ?></h2>
+          <p class="textoSuperior1">Mi cédula: <?= $_GET['cedula'] ?></p>
 
           <h2>
             <span class="ocultar" id="textoPais">COLOMBIA</span><span class="ocultar" id="textoDpto"></span>
@@ -53,39 +52,18 @@
           <br>
           <br>
 
-          <form
-            action="../../controlador/amigo/almacenar_amigo.php"
-            method="post"
-            autocomplete="off"
-          >
+        <form
+          action="../../controlador/amigo/almacenar_amigo.php"
+          id="formularioCrearAmigo"
+          method="post"
+          autocomplete="off"
+        >
           <div id="datosPersonales">
-            <input
-              class="entradaFormulario"
-              type="hidden"
-              name="cedula"
-              value="<?= $_GET['cedula'] ?>"
-            >
-
-            <input
-              class="entradaFormulario"
-              type="text"
-              name="nombre"
-              placeholder="Nombre"
-              required
-            >
-
-            <input
-              class="entradaFormulario"
-              type="text"
-              name="apellidos"
-              placeholder="Apellidos"
-              required
-            >
 
             <?php include '../../controlador/amigo/obtener_paises.php' ?>
 
             <select
-              class="entradaFormulario"
+              class="entradaFormulario texto30"
               id="selectPaises"
               name="pais"
             >
@@ -104,15 +82,42 @@
 
             <input
               class="entradaFormulario"
+              type="hidden"
+              name="cedula"
+              value="<?= $_GET['cedula'] ?>"
+            >
+
+            <input
+              class="entradaFormulario"
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Nombre"
+              required
+            >
+
+            <input
+              class="entradaFormulario"
+              type="text"
+              name="apellidos"
+              id="apellidos"
+              placeholder="Apellidos"
+              required
+            >
+
+            <input
+              class="entradaFormulario"
               type="number"
               name="celular"
-              placeholder="Celular"
+              id="celular"
+              placeholder="Celular de contacto"
             >
 
             <input
               class="entradaFormulario"
               type="number"
               name="telefono"
+              id="telefono"
               placeholder="Teléfono"
             >
 
@@ -123,9 +128,11 @@
               placeholder="E-mail"
             >
 
+            <p style="font-size: 22pt;">Fecha de nacimiento</p>
             <input
               class="entradaFormulario textoBlanco"
               type="date"
+              id="fecha_nac"
               name="fecha_nac"
               placeholder="Fecha de Nacimiento"
               required
@@ -155,7 +162,7 @@
               </optgroup>
             </select>
 
-            <p style="font-size: 22pt;">Si no encuentras el barrio, escogia <b>Barrio no encontrado</b> y digita el barrio</p>
+            <p style="font-size: 22pt;">Si no encuentras el barrio, escoge "<b>Barrio no encontrado</b>" y digita el barrio</p>
 
             <select
               class="entradaFormulario"
@@ -178,7 +185,7 @@
               class="entradaFormulario ocultar"
               type="text"
               name="barrio_opcional"
-              placeholder="Barrio"
+              placeholder="Digite el nombre del barrio"
               id="barrio_opcional"
             >
 
@@ -213,7 +220,7 @@
           >
 
             <select
-              class="entradaFormulario"
+              class="entradaFormulario texto30"
               id="selectPuestosVotacion"
               name="puesto_votacion"
             >
@@ -240,7 +247,7 @@
             <br>
 
             <div class="opcionRadio">
-              <h2>¿Puede votar? </h2>
+              <h2 id="textoPuedeVotar">¿Puede votar? </h2>
 
               <label for="">
                 Si
@@ -267,7 +274,7 @@
             </div>
 
             <div class="opcionRadio">
-              <h2>¿Es jurado? </h2>
+              <h2 id="textoJurado">¿Es jurado? </h2>
 
               <label for="">
                 Si
@@ -294,7 +301,7 @@
             </div>
 
             <div class="opcionRadio">
-              <h2>¿Es testigo? </h2>
+              <h2 id="textoTestigo">¿Es testigo? </h2>
 
               <label for="">
                 Si
@@ -318,15 +325,27 @@
                 >
 
               </label>
-            </div>
-
-            <div class="opcionRadio">
-              <input type="checkbox" name="" id="">
-              <h2>Acepto el <a href="../../terminos_condiciones.php" target="_blank">manejo de datos</a></h2>
-
             </div>
 
             <br>
+            <hr>
+            <br>
+
+            <div>
+              <h2>
+                <a href="../../manejo_datos.php" target="_blank">Toca Aquí</a> <span id="restanteTocaAqui">para leer términos de manejo de datos.<span>
+              </h2>
+
+            </div>
+
+            <div class="manejoDatos">
+              <input type="checkbox" id="manejoDatosMarcable">
+              <h2><a href="../../manejo_datos.php" target="_blank">Acepto el manejo de datos</a>
+              </h2>
+
+            </div>
+
+            <br><br><br>
 
 
 
@@ -341,7 +360,7 @@
               class="botonSiguiente"
               id="siguientePuestoVotacion"
               type="button"
-              value="Registrarme"
+              value="Registrarte"
             >
           </div>
         </form>
