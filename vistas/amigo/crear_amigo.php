@@ -87,6 +87,14 @@
               value="<?= $_GET['cedula'] ?>"
             >
 
+
+            <input
+              class="entradaFormulario"
+              type="hidden"
+              name="cedula_lider"
+              value="<?= $_GET['cedula_lider'] ?>"
+            >
+
             <input
               class="entradaFormulario"
               type="text"
@@ -256,7 +264,7 @@
                   type="radio"
                   name="puede_votar"
                   id="puede_votar"
-                  value="Si"
+                  value="1"
                 >
               </label>
 
@@ -267,7 +275,7 @@
                   type="radio"
                   name="puede_votar"
                   id="puede_votar"
-                  value="No"
+                  value="0"
                 >
 
               </label>
@@ -283,7 +291,7 @@
                   type="radio"
                   name="jurado"
                   id="jurado"
-                  value="Si"
+                  value="1"
                 >
               </label>
 
@@ -294,7 +302,7 @@
                   type="radio"
                   name="jurado"
                   id="jurado"
-                  value="No"
+                  value="0"
                 >
 
               </label>
@@ -310,7 +318,7 @@
                   type="radio"
                   name="testigo"
                   id="testigo"
-                  value="Si"
+                  value="1"
                 >
               </label>
 
@@ -321,7 +329,7 @@
                   type="radio"
                   name="testigo"
                   id="testigo"
-                  value="No"
+                  value="0"
                 >
 
               </label>
