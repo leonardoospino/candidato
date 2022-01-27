@@ -13,6 +13,7 @@ var textoMesa = document.querySelector('#textoMesa');
 var textoTestigo = document.querySelector('#textoTestigo');
 var textoJurado = document.querySelector('#textoJurado');
 var textoPuedeVotar = document.querySelector('#textoPuedeVotar');
+var textoGenero = document.querySelector('#textoGenero');
 
 var listaPaises = document.querySelector('#selectPaises');
 var listaDepartamentos = document.querySelector('#selectDptos');
@@ -55,6 +56,13 @@ function validarDatosPersonales() {
     campoApellidos.classList.remove('error');
   }
 
+
+  if (document.querySelector('#genero:checked')) {
+    textoGenero.classList.remove('errorTexto');
+  } else {
+    datosValidos = false;
+    textoGenero.classList.add('errorTexto');
+  }
 
   if (celular.length >= 10) {
     campoCelular.classList.remove('error');
@@ -267,7 +275,7 @@ function obtenerBarrios(municipio_cod) {
         contenidoHtml += (
           `<option
             value="${barrios[indice]['barrio_cod']}"
-            data-comuna_loc="${ barrios[indice]['nombre_comuna_loc'] }"
+            data-comuna_loc="${ barrios[indice]['comuna_numero'] + (barrios[indice]['nombre_comuna_loc'] == 0? '' : ' ' + barrios[indice]['nombre_comuna_loc']) }"
           >${ barrios[indice]['barrio'] }</option>`
         );
       }

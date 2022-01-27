@@ -67,7 +67,8 @@
 			<div class="login-box">
 				<img src="../../recursos/img/logo.jpg" class="avatar" alt="Avatar Image">
 				<h1>Registro Amigo(a)</h1>
-				<p style="font-size: 18pt;">Gracias por ser parte de nuestra red de amigos.</p>
+				<p class="letraNormal">Gracias por ser parte de nuestra red de amigos.</p>
+				<br><br><br>
 
 				<!-- EVITAR QUE LOS CAMPOS AUTCOMPLETEN -->
 				<!-- autocomplete="off -->
@@ -76,7 +77,7 @@
 					method="POST"
 					autocomplete="off"
 				>
-					<p style="font-size: 18pt;">Digite su cédula:</p>
+					<p class="letraNormal">Digite su cédula:</p>
 					<input
 						type="number"
 						name="cedula"
@@ -86,7 +87,7 @@
 						required
 					>
 
-					<p style="font-size: 18pt;">Digite la cédula del líder</p>
+					<p class="letraNormal">Digite la cédula del líder</p>
 					<input
 						type="number"
 						name="cedula_lider"
@@ -94,6 +95,7 @@
 						class="entradaFormulario"
 						placeholder="Cédula sin puntos ni comas"
 					>
+
 					<input class="botonSiguiente" type="submit" value="Entrar">
 				</form>
 

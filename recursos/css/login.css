@@ -1,5 +1,9 @@
+body {
+  width: 100%;
+}
+
 .login-box {
-  width: 520px;
+  width: 85%;
   height: 720px;
   background: #000;
   color: #fff;
@@ -91,6 +95,7 @@
 }
 
 .textoBlanco {
+  background: black !important;
   color: #fff !important;
   color-scheme: dark;
 }
@@ -106,6 +111,7 @@
   height: 100px;
   color: white;
   font-size: 40px;
+  text-align: center;
 }
 
 .selectPequeno {
@@ -119,6 +125,7 @@
 
 .letraNormal {
 	font-weight: normal !important;
+  font-size: 30px;
 }
 
 .opcionRadio h2 {
@@ -173,4 +180,10 @@
   font-size: 29px;
   font-weight: normal;
 
+}
+
+.botones {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }

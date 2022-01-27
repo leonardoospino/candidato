@@ -19,6 +19,7 @@ foreach ($barrios as $index => $barrio) {
     '"' . $index . '": ' . '{' .
       '"barrio": "' . utf8_encode($barrio['barrio']) . '",' .
       '"municipio_cod": ' . $barrio['municipio_cod'] . ',' .
+      '"comuna_numero": ' . $barrio['comuna_numero'] . ',' .
       '"comuna_loc_cod": ' . $barrio['comuna_loc_cod'] . ',' .
       '"nombre_comuna_loc": "' . utf8_encode($barrio['nombre_comuna_loc']) . '",' .
       '"barrio_cod": ' . $barrio['barrio_cod'] .

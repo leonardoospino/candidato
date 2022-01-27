@@ -22,24 +22,55 @@ $mesa = mysqli_real_escape_string($conexion, $_POST['mesa']);
 $puede_votar = mysqli_real_escape_string($conexion, $_POST['puede_votar']);
 $jurado = mysqli_real_escape_string($conexion, $_POST['jurado']);
 $testigo = mysqli_real_escape_string($conexion, $_POST['testigo']);
+$genero = mysqli_real_escape_string($conexion, $_POST['genero']);
+
+$consulta = (
+  "INSERT INTO amigos (" .
+    "cedula, " .
+    "nombre, " .
+    "apellidos, " .
+    "celular, " .
+    "telefono, " .
+    "email, " .
+    "fecha_nac, " .
+    "barrio_cod, " .
+    "barrio_opcional, " .
+    "direccion, " .
+    "puesto_cod, " .
+    "mesa, " .
+    "puede_votar, " .
+    "jurado, " .
+    "testigo, " .
+    "genero, " .
+    "cedula_lider " .
+  ") VALUES (" .
+    "'$cedula', " .
+    "'$nombre', " .
+    "'$apellidos', " .
+    "'$celular', " .
+    "'$telefono', " .
+    "'$email', " .
+    "'$fecha_nac', " .
+    "'$barrio', " .
+    "'$barrio_opcional', " .
+    "'$direccion', " .
+    "'$puesto_votacion', " .
+    "'$mesa', " .
+    "'$puede_votar', " .
+    "'$jurado', " .
+    "'$testigo', " .
+    "'$genero', " .
+    "'$cedula_lider' " .
+  ")"
+);
+
+$resultado = $conexion->query($consulta);
 
 
-echo $cedula . '<br>';
-echo $cedula_lider . '<br>';
-echo $nombre . '<br>';
-echo $apellidos . '<br>';
-echo $pais . '<br>';
-echo $celular . '<br>';
-echo $telefono . '<br>';
-echo $email . '<br>';
-echo $fecha_nac . '<br>';
-echo $dpto . '<br>';
-echo $municipio . '<br>';
-echo $barrio . '<br>';
-echo $barrio_opcional . '<br>';
-echo $direccion . '<br>';
-echo $puesto_votacion . '<br>';
-echo $mesa . '<br>';
-echo $puede_votar . '<br>';
-echo $jurado . '<br>';
-echo $testigo . '<br>';
+// if ($resultado) { // Grabación exitosa
+//   header("Location: ../../vistas/amigo/");
+// } else {
+//   header("Location: ../../vistas/amigo/");
+// }
+
+header("Location: ../../index.php");

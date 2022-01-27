@@ -41,12 +41,12 @@
 		<div id="portada" align="center">
 
 			<div class="login-box">
-          <p class="textoSuperior1">Mi cédula: <?= $_GET['cedula'] ?></p>
+          <p class="textoSuperior1">Cédula: <?= $_GET['cedula'] ?></p>
 
           <h2>
-            <span class="ocultar" id="textoPais">COLOMBIA</span><span class="ocultar" id="textoDpto"></span>
+            <span class="textoSuperior1 ocultar" id="textoPais">COLOMBIA</span><span class="ocultar textoSuperior1" id="textoDpto"></span>
           </h2>
-          <h2 class="ocultar" id="textoMunicipio"></h2>
+          <h2 class="ocultar textoSuperior1" id="textoMunicipio"></h2>
           <p style="font-size: 22pt;">DIGITE:</p>
           <hr/>
           <br>
@@ -58,7 +58,10 @@
           method="post"
           autocomplete="off"
         >
-          <div id="datosPersonales">
+          <div
+            id="datosPersonales"
+            class="ocultar"
+          >
 
             <?php include '../../controlador/amigo/obtener_paises.php' ?>
 
@@ -113,6 +116,43 @@
               required
             >
 
+            <div class="opcionRadio">
+              <h2 id="textoGenero">Género</h2>
+
+              <label>
+                H
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="genero"
+                  id="genero"
+                  value="1"
+                >
+              </label>
+
+              <label>
+                M
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="genero"
+                  id="genero"
+                  value="0"
+                >
+              </label>
+
+              <label>
+                Otro
+                <input
+                  class="entradaRadio"
+                  type="radio"
+                  name="genero"
+                  id="genero"
+                  value="2"
+                >
+              </label>
+            </div>
+
             <input
               class="entradaFormulario"
               type="number"
@@ -146,11 +186,21 @@
               required
             >
 
-            <p style="font-size: 22pt;">Leer bien antes de grabar</p>
-            <input class="botonSiguiente" id="guardarDatosPersonales" type="button" value="Siguiente">
+            <p style="font-size: 22pt;">Leer bien antes de continuar</p>
+            <div class="botones">
+              <input
+                class="botonSiguiente"
+                id="guardarDatosPersonales"
+                type="button"
+                value="Siguiente"
+              >
+            </div>
           </div>
 
-          <div id="datosDireccion" class="ocultar">
+          <div
+            id="datosDireccion"
+            class="ocultar"
+          >
             <!-- AQUI SE DEBEN CARGAR LOS CAMPOS DE DIRECCIONES -->
             <select
               class="entradaFormulario"
@@ -206,27 +256,31 @@
             >
 
             <!-- AQUI SE DEBEN CARGAR LOS CAMPOS DE DIRECCIONES -->
-            <p style="font-size: 22pt;">Leer bien antes de grabar</p>
-            <input
-              class="botonSiguiente"
-              id="anteriorDireccion"
-              type="button"
-              value="Anterior"
-            >
-            &nbsp;&nbsp;
-            <input
-              class="botonSiguiente"
-              id="siguienteDireccion"
-              type="button"
-              value="Siguiente"
-            >
+            <p style="font-size: 22pt;">Leer bien antes de continuar</p>
+
+            <div class="botones">
+              <input
+                class="botonSiguiente"
+                id="anteriorDireccion"
+                type="button"
+                value="Anterior"
+              >
+              &nbsp;&nbsp;
+              <input
+                class="botonSiguiente"
+                id="siguienteDireccion"
+                type="button"
+                value="Siguiente"
+              >
+            </div>
+
           </div>
 
           <div
             id="datosPuestoVotacion"
-            class="ocultar"
           >
-
+            <h2 class="letraNormal">Puesto de votación</h2>
+            <!-- Enlace para verificar puesto de votacion -->
             <select
               class="entradaFormulario texto30"
               id="selectPuestosVotacion"
@@ -243,7 +297,7 @@
             <br>
 
             <h2 class="letraNormal">
-              Seleccionar la mesa de votación del 1 al <span id="textoMesa"></span>
+              Seleccione la mesa de votación del 1 al <span id="textoMesa"></span>
             </h2>
 
             <select
@@ -283,7 +337,7 @@
 
             <div class="opcionRadio">
               <h2 id="textoJurado">¿Es jurado? </h2>
-
+              <!-- Verificar si es jurado -->
               <label for="">
                 Si
                 <input
@@ -357,19 +411,21 @@
 
 
 
-            <input
-              class="botonSiguiente"
-              id="anteriorPuestoVotacion"
-              type="button"
-              value="Anterior"
-            >
-            &nbsp;&nbsp;
-            <input
-              class="botonSiguiente"
-              id="siguientePuestoVotacion"
-              type="button"
-              value="Registrarte"
-            >
+            <div class="botones">
+              <input
+                class="botonSiguiente"
+                id="anteriorPuestoVotacion"
+                type="button"
+                value="Anterior"
+              >
+              &nbsp;&nbsp;
+              <input
+                class="botonSiguiente"
+                id="siguientePuestoVotacion"
+                type="button"
+                value="Registrarte"
+              >
+            </div>
           </div>
         </form>
       </div>
