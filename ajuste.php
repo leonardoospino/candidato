@@ -21,39 +21,7 @@
 	<meta name="page-topic" content="elections" />
 	<meta name="viewport" content="width=device-width" />
 
-	<link href="./recursos/css/style.css" rel="stylesheet" type="text/css" media="screen" />
-
-	<style type="text/css">
-		#portada {
-			height: 1171px;
-			width: 751px;
-			float: left;
-			background-image: url(recursos/img/1.jpg);
-		}
-
-		#menuserv {
-			height: 82px;
-			width: 751px;
-			float: left;
-			margin-top: 900px;
-			margin-left: 0px;
-		}
-
-		#barra-social {
-			font-size: 1.5rem;
-			height: 70px;
-			width: 430px;
-			margin-left: auto;
-			margin-right: auto;
-			left: auto;
-			right: auto;
-		}
-
-		#social {
-			margin-left: auto;
-			margin-right: auto;
-		}
-	</style>
+	<link href="./recursos/css/default.css" rel="stylesheet" type="text/css" media="screen" />
 
 </head>
 
