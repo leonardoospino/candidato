@@ -91,7 +91,7 @@
 
 				<a href="vistas/amigo/cedula_amigo.php"><img src="recursos/img/a.png" width="350" height="82" alt="" /></a>
 
-				<a href="cedula_lider.html"><img src="recursos/img/b.png" width="350" height="82" alt="" /></a>
+				<a href="vistas/lider/crear_lider.php"><img src="recursos/img/b.png" width="350" height="82" alt="" /></a>
 
 				<a href="a.html"><img src="recursos/img/c.png" width="350" height="82" alt="" /></a>
 

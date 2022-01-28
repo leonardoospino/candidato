@@ -191,3 +191,11 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
+#contenedorNombreCompleto {
+  margin-bottom: 0;
+}
+
+#contenedorTextoCedula {
+  margin-top: 0;
+}
