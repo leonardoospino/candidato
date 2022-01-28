@@ -60,7 +60,6 @@
         >
           <div
             id="datosPersonales"
-            class="ocultar"
           >
 
             <?php include '../../controlador/amigo/obtener_paises.php' ?>
@@ -278,9 +277,17 @@
 
           <div
             id="datosPuestoVotacion"
+            class="ocultar"
           >
             <h2 class="letraNormal">Puesto de votación</h2>
-            <!-- Enlace para verificar puesto de votacion -->
+            <a
+              href="https://wsp.registraduria.gov.co/censo/consultar"
+              target="_blank"
+            >
+              Si no sabes donde votar Toca Aquí
+            </a>
+            <br>
+            <br>
             <select
               class="entradaFormulario texto30"
               id="selectPuestosVotacion"
@@ -335,9 +342,16 @@
               </label>
             </div>
 
+              <a
+                href="https://wsp.registraduria.gov.co/jurados_atipicas/consultar_jurados.php"
+                target="_blank"
+              >
+                Toca Aquí para consultar si eres jurado
+              </a>
+              <br>
+              <br>
             <div class="opcionRadio">
               <h2 id="textoJurado">¿Es jurado? </h2>
-              <!-- Verificar si es jurado -->
               <label for="">
                 Si
                 <input

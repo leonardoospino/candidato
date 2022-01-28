@@ -114,6 +114,10 @@ body {
   text-align: center;
 }
 
+#selectPuestosVotacion {
+  margin-bottom: 5px !important;
+}
+
 .selectPequeno {
   width: 20% !important;
 }
