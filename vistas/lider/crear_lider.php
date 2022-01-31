@@ -134,7 +134,12 @@
             id="digitarClave"
             class="ocultar"
           >
-            <p class="letraNormal">Digite la contraseña y su confirmación</p>
+            <p class="letraNormal" id="claveAvisoIniciarSesion">
+              Digite la contraseña
+            </p>
+            <p class="letraNormal" id="claveAvisoRegistrarte">
+              Digite la contraseña y su confirmación para crearse como líder
+            </p>
             <input
               type="password"
               name="clave"
@@ -151,6 +156,22 @@
               class="entradaFormulario"
               placeholder="Confirmar contraseña"
               required
+            >
+
+            <input
+              class="botonSiguiente"
+              type="button"
+              value="Iniciar sesión"
+              id="botonIniciarSesion"
+            >
+
+
+
+            <input
+              class="botonSiguiente"
+              type="button"
+              value="Registrarte"
+              id="botonRegistrarte"
             >
           </div>
 

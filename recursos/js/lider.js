@@ -51,7 +51,8 @@ validarCedulaBotonSiguiente.addEventListener(
           enlaceCedulaAmigo.classList.remove('ocultar');
           contenedorValidarCedula.classList.remove('ocultar');
           contenedorDigitarClave.classList.add('ocultar');
-        } else { // EXISTE LA CEDULA EN LA TABLA AMIGO
+        } else {
+          // EXISTE LA CEDULA EN LA TABLA AMIGO PERO NO ES LIDER
 
           $.ajax({
             type: 'POST',
@@ -61,10 +62,14 @@ validarCedulaBotonSiguiente.addEventListener(
             success: function(respuestaLider) {
 
               if (respuestaLider.existe) { //OCULTAR confirmar contraseña
+                document.querySelector('#claveAvisoRegistrarte').classList.add('ocultar');
                 campoClaveConfirmacion.required = false;
                 campoClaveConfirmacion.type = 'hidden';
                 formularioLider.action = '../../controlador/lider/iniciar_sesion.php';
+                document.querySelector('#botonRegistrarte').classList.add('ocultar');
               } else {
+                document.querySelector('#claveAvisoIniciarSesion').classList.add('ocultar');
+                document.querySelector('#botonIniciarSesion').classList.add('ocultar');
                 formularioLider.action = '../../controlador/lider/almacenar_lider.php';
               }
 
@@ -86,4 +91,48 @@ validarCedulaBotonSiguiente.addEventListener(
       }
     });
   }
+);
+
+function validarCampo(campo) {
+  var campoValido = (campo.value.length > 0);
+
+  if (campoValido) {
+    campo.classList.remove('error');
+  } else {
+    campo.classList.add('error');
+  }
+
+  return campoValido;
+}
+
+document.querySelector('#botonIniciarSesion').addEventListener(
+  'click',
+  function() {
+    if (validarCampo(campoClave)) {
+      document.querySelector('#formularioLider').submit();
+    }
+  }
+);
+
+function validarClaveYConfirmacion() {
+  var clavesValidas = validarCampo(campoClave);
+  clavesValidas = clavesValidas && validarCampo(campoClaveConfirmacion);
+
+  if (!clavesValidas) {
+    return false;
+  }
+
+  return (campoClave.value === campoClaveConfirmacion.value);
+}
+
+document.querySelector('#botonRegistrarte').addEventListener(
+  'click',
+  function() {
+    if (validarClaveYConfirmacion()) {
+      document.querySelector('#formularioLider').submit();
+    } else {
+      console.log('Las claves no coinciden!');
+    }
+  }
 )
+
