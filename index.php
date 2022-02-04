@@ -69,7 +69,7 @@
 					<button name="boton1" class="boton">Inicio</button>
 				</a>
 
-				<a href="tel:+573125817322">
+				<a href="tel:+573184473141">
 					<button name="boton2" class="boton">WhatsApp</button>
 				</a>
 
