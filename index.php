@@ -42,7 +42,7 @@
 		#barra-social {
 			font-size: 1.5rem;
 			height: 70px;
-			width: 430px;
+  		width: 550px;
 			margin-left: auto;
 			margin-right: auto;
 			left: auto;
@@ -114,6 +114,10 @@
 						height="70" alt="" /></a>
 
 				<a href="https://www.facebook.com/alvarodavidadarve"><img src="recursos/img/iconos/2.png" width="100" height="70"
+						alt="" /></a>
+
+
+				<a href="https://www.facebook.com/alvarodavidadarve"><img src="recursos/img/iconos/0.png" width="100" height="70"
 						alt="" /></a>
 
 				<a href=""><img src="recursos/img/iconos/3.png" width="100" height="70" alt="" /></a>
