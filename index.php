@@ -127,7 +127,7 @@
 						alt="" /></a>
 
 
-				<a href="https://www.facebook.com/alvarodavidadarve"><img src="recursos/img/iconos/0.png" width="100" height="70"
+				<a class="jsComparteEnlace" ><img src="recursos/img/iconos/0.png" width="100" height="70"
 						alt="" /></a>
 
 				<a href=""><img src="recursos/img/iconos/3.png" width="100" height="70" alt="" /></a>
@@ -137,8 +137,10 @@
 			</div>
 		</div>
 		<!-- FIN BARRA REDES SOCIALES -->
-
 	</div>
+
+
+	<script src="./recursos/js/compartir.js"></script>
 </body>
 
 </html>
