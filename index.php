@@ -77,7 +77,7 @@
 					<button name="boton3" class="boton">Agenda</button>
 				</a>
 
-				<a href="https://wa.me/573208746479">
+				<a href="vote-asi.php">
 					<button name="boton4" class="boton">Vote Así</button>
 				</a>
 
