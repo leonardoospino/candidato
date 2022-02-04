@@ -127,7 +127,7 @@
 						alt="" /></a>
 
 
-				<a class="jsComparteEnlace" ><img src="recursos/img/iconos/0.png" width="100" height="70"
+				<a class="accion jsComparteEnlace" ><img src="recursos/img/iconos/0.png" width="100" height="70"
 						alt="" /></a>
 
 				<a href=""><img src="recursos/img/iconos/3.png" width="100" height="70" alt="" /></a>
