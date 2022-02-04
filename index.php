@@ -107,6 +107,16 @@
 		</div>
 		<!-- FIN MENU -->
 
+		<input
+			type="hidden"
+			class="jsEnlace"
+			value="<?= (
+				$_SERVER['REQUEST_SCHEME'] .
+				'://' .
+				$_SERVER['SERVER_NAME']
+			) ?>"
+		/>
+
 		<!-- BARRA REDES SOCIALES -->
 		<div id="social">
 			<div id="barra-social">
