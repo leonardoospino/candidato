@@ -140,7 +140,7 @@
 	</div>
 
 
-	<script src="./recursos/js/compartir.js"></script>
+	<script src="./recursos/js/compartir_enlace.js"></script>
 </body>
 
 </html>
