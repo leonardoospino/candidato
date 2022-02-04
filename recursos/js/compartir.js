@@ -10,7 +10,18 @@ var dComparteEnlace = (
 );
 
 function compartirEnlace() {
-  alert('El enlace se compartira');
+  if (navigator.share) {
+    (
+      navigator
+      .share({
+        url: enlace
+      })
+      .then(() => console.log('Compartiendo enlace'))
+      .catch((err) => console.log('Error', err))
+    );
+  } else {
+    alert('Este equipo no tiene la acción de compartir');
+  }
 }
 
 (
