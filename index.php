@@ -78,7 +78,7 @@
 				</a>
 
 				<a href="https://wa.me/573208746479">
-					<button name="boton4" class="boton">Compartir</button>
+					<button name="boton4" class="boton">Vote Así</button>
 				</a>
 
 			</div>
