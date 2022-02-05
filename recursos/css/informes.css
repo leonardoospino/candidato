@@ -70,9 +70,10 @@ th {
   margin-top: 45px !important;
 }
 
-.tablaTextoIzquierda tr th{
+.tablaTextoIzquierda tr td{
   text-align: start;
-  font-weight: normal;
+  font-weight: lighter;
+  border-bottom: 1px solid gray;
 }
 
 .ancho30 {

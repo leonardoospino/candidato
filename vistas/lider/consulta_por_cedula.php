@@ -76,11 +76,13 @@
         </form>
 
         <br><br>
-        <div class="resultadoContenedor">
+        <div class="resultadoContenedor ocultar">
           <table class="tablaResultado tablaTextoIzquierda">
 
           </table>
         </div>
+        <br>
+        <br>
 
       </div>
 

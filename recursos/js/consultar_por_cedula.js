@@ -53,83 +53,83 @@ function consultarPorCedula() {
 
           var tablaContenido = (
             `<tr>
-              <th class="ancho50">Cédula</th>
-              <th>${ amigo.cedula }</th>
+              <td class="ancho30">Cédula</td>
+              <td class="texto30">${ amigo.cedula }</td>
             </tr>
             <tr>
               <td>Nombre</td>
-              <td>${ amigo.nombre + ' ' + amigo.apellidos }</td>
+              <td class="texto30">${ amigo.nombre + ' ' + amigo.apellidos }</td>
             </tr>
             <tr>
               <td>Genero</td>
-              <td>${ amigo.genero }</td>
+              <td class="texto30">${ amigo.genero }</td>
             </tr>
 
             <tr>
               <td>Celular</td>
-              <td>${ amigo.celular }</td>
+              <td class="texto30">${ amigo.celular }</td>
             </tr>
             <tr>
               <td>Teléfono</td>
-              <td>${ amigo.telefono }</td>
+              <td class="texto30">${ amigo.telefono }</td>
             </tr>
             <tr>
               <td>Correo</td>
-              <td>${ amigo.correo }</td>
+              <td class="texto30">${ amigo.correo }</td>
             </tr>
             <tr>
               <td>Fecha de nac.</td>
-              <td>${ amigo.fechaNacimiento }</td>
+              <td class="texto30">${ amigo.fechaNacimiento }</td>
             </tr>
             <tr>
               <td>Pais</td>
-              <td>${ amigo.pais }</td>
+              <td class="texto30">${ amigo.pais }</td>
             </tr>
             <tr>
-              <td>Departamento</td>
-              <td>${ amigo.dpto }</td>
+              <td>Dpto</td>
+              <td class="texto30">${ amigo.dpto }</td>
             </tr>
             <tr>
               <td>Municipio</td>
-              <td>${ amigo.municipio }</td>
+              <td class="texto30">${ amigo.municipio }</td>
             </tr>
             <tr>
               <td>Barrio</td>
-              <td>${ amigo.barrio }</td>
+              <td class="texto30">${ amigo.barrio }</td>
             </tr>
             <tr>
               <td>Barrio opcional</td>
-              <td>${ amigo.barrioOpcional }</td>
+              <td class="texto30">${ amigo.barrioOpcional }</td>
             </tr>
 
             <tr>
               <td>Direccion</td>
-              <td>${ amigo.direccion }</td>
+              <td class="texto30">${ amigo.direccion }</td>
             </tr>
 
             <tr>
               <td>Puesto vot.</td>
-              <td>${ amigo.puestoDeVotacion }</td>
+              <td class="texto30">${ amigo.puestoDeVotacion }</td>
             </tr>
 
             <tr>
               <td>Mesa</td>
-              <td>${ amigo.mesa }</td>
+              <td class="texto30">${ amigo.mesa }</td>
             </tr>
 
             <tr>
               <td>Puede votar</td>
-              <td>${ amigo.puedeVotar }</td>
+              <td class="texto30">${ amigo.puedeVotar }</td>
             </tr>
 
             <tr>
               <td>Es jurado</td>
-              <td>${ amigo.esJurado }</td>
+              <td class="texto30">${ amigo.esJurado }</td>
             </tr>
 
             <tr>
               <td>Es testigo</td>
-              <td>${ amigo.esTestigo }</td>
+              <td class="texto30">${ amigo.esTestigo }</td>
             </tr>`
           );
           (
@@ -137,7 +137,7 @@ function consultarPorCedula() {
             .innerHTML = tablaContenido
           );
         } else {
-
+          dResultadoContenedor.classList.add('ocultar');
         }
       },
       error: function(err) {
