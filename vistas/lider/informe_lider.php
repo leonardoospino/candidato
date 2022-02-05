@@ -102,7 +102,12 @@
              -->
             <li>
               <a href="./listado_amigos_lider.php">
-                Listado de amigos
+                Listado de amigos en pantalla
+              </a>
+            </li>
+            <li>
+              <a href="../../controlador/lider/exportar_listado_amigos.php">
+                Exportar listado de amigos
               </a>
             </li>
           </ul>
