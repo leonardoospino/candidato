@@ -37,10 +37,10 @@
   <div id="container">
 
     <!-- header -->
+    <?php require '../../compartido/cabecera.php' ?>
 
-    <header>
+    <!-- <header>
       <div id="botones">
-
         <a href="../../index.php">
           <button name="boton1" class="boton">Inicio</button>
         </a>
@@ -53,12 +53,11 @@
           <button name="boton3" class="boton">Agenda</button>
         </a>
 
-        <a href="https://wa.me/573125817322">
-          <button name="boton4" class="boton">Compartir</button>
+        <a href="./informe_lider.php">
+          <button name="boton4" class="boton">Volver</button>
         </a>
-
       </div>
-    </header>
+    </header> -->
     <!-- FIN header -->
 
 
