@@ -57,3 +57,15 @@ a:hover {
 .accion {
   cursor: pointer;
 }
+
+.fijo {
+  top: 0;
+  padding-top: 10px !important;
+  padding-bottom: 5px !important;
+  position: fixed;
+  background-color: #000000;
+}
+
+.mt-64 {
+  margin-top: 64px !important;
+}

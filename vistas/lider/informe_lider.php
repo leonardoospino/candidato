@@ -44,7 +44,7 @@
 
 
     <!-- LOGIN -->
-    <div id="portada" align="center">
+    <div class="mt-45" id="portada" align="center">
 
       <div class="login-box">
         <h1>Informe Líder</h1>
@@ -99,7 +99,7 @@
 
         <br><br>
         <p class="texto40 m-0">
-          Consultas
+          Consulta y Modificación
         </p>
 
         <div class="contenedorInformesMenu">
@@ -116,6 +116,11 @@
             </li>
           </ul>
         </div>
+        <br><br>
+        <p class="texto40 m-0">
+          Eliminar Amigo
+        </p>
+
       </div>
       <!-- FIN LOGIN -->
 

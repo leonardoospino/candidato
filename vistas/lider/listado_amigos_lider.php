@@ -42,7 +42,7 @@
 
 
     <!-- LOGIN -->
-    <div id="portada" align="center">
+    <div class="mt-45" id="portada" align="center">
 
       <div class="login-box">
         <h1>Listado de amigos por municipio</h1>

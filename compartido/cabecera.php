@@ -7,7 +7,7 @@
 ?>
 
 
-<header>
+<header class="fijo">
   <div id="botones">
     <a href="<?= $sitioBase ?>">
       <button name="boton1" class="boton">

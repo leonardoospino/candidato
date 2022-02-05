@@ -42,7 +42,7 @@
 
 
     <!-- LOGIN -->
-    <div id="portada" align="center">
+    <div class="mt-45" id="portada" align="center">
 
       <div class="login-box">
         <h1>Estadística de amigos</h1>
