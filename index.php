@@ -62,28 +62,10 @@
 
 		<!-- header -->
 
-		<header>
-			<div id="botones">
 
-				<a href="index.php">
-					<button name="boton1" class="boton">Inicio</button>
-				</a>
-
-				<a href="tel:+573184473141">
-					<button name="boton2" class="boton">WhatsApp</button>
-				</a>
-
-				<a href="agenda.php">
-					<button name="boton3" class="boton">Agenda</button>
-				</a>
-
-				<a href="vote-asi.php">
-					<button name="boton4" class="boton">Vote Así</button>
-				</a>
-
-			</div>
-		</header>
-		<!-- FIN header -->
+    <!-- header -->
+    <?php require './compartido/cabecera.php' ?>
+    <!-- FIN header -->
 
 		<!-- MENU -->
 		<div id="portada" align="center">

@@ -1,11 +1,16 @@
+<?php
+  $sitioBase = (
+    $_SERVER['REQUEST_SCHEME'] .
+    '://' .
+    $_SERVER['SERVER_NAME']
+  );
+?>
+
+
 <header>
   <div id="botones">
     <a
-      href="<?= (
-        $_SERVER['REQUEST_SCHEME'] .
-        '://' .
-        $_SERVER['SERVER_NAME']
-      ) ?>"
+      href="<?= $sitioBase ?>"
     >
       <button name="boton1" class="boton">Inicio</button>
     </a>
@@ -18,15 +23,25 @@
       <button name="boton3" class="boton">Agenda</button>
     </a>
 
-    <a
-      href="<?= (
-        $_SERVER['REQUEST_SCHEME'] .
-        '://' .
-        $_SERVER['SERVER_NAME'] .
-        '/vistas/lider/informe_lider.php'
-      ) ?>"
-    >
-      <button name="boton4" class="boton">Volver</button>
-    </a>
+    <?php if (
+      in_array(
+        $_SERVER['REQUEST_URI'],
+        [
+          '/vistas/lider/estadisticas_lider.php',
+          '/vistas/lider/listado_amigos_lider.php',
+        ]
+      )
+    ) { ?>
+      <a href="<?= $sitioBase ?>/vistas/lider/informe_lider.php">
+        <button name="boton4" class="boton">Volver X</button>
+      </a>
+
+    <?php } else { ?>
+      <a href="<?= $sitioBase ?>/vote-asi.php">
+        <button name="boton4" class="boton">
+          Vote Así X
+        </button>
+      </a>
+    <?php } ?>
   </div>
 </header>
