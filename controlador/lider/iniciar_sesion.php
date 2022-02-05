@@ -27,9 +27,8 @@ if ($resultado->num_rows > 0) {
 
   print_r($_SESSION);
 
-  echo '<h1>Sesion iniciada!</h1>';
-  echo '<h1>Redireccionar hacia la pagina donde deba acceder el usuario</h1>';
+  header("Location: ../../vistas/lider/informe_lider.php");
 } else {
+  header("Location: ../../vistas/lider/crear_lider.php?error=clave");
   session_destroy();
-
 }

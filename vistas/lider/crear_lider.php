@@ -108,6 +108,13 @@
             >
               Toca Aquí para registrarte como amigo
             </a>
+
+            <?php if(isset($_GET['error'])) { ?>
+              <p class="letraNormal errorTexto">
+                La contraseña es incorrecta, digita nuevamente
+              </p>
+            <?php } ?>
+
             <br><br><br>
 
             <p class="letraNormal">Digite su cédula:</p>

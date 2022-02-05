@@ -1,0 +1,27 @@
+.login-box {
+  margin-top: 0;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.contenedorInformesMenu {
+  text-align: start;
+  font-size: 36px;
+}
+
+.tablaResultado {
+  border: 1px solid white;
+  border-collapse: collapse;
+  font-size: 25px;
+  width: 100%;
+}
+
+td, th {
+  padding: 3px;
+}
+
+th {
+  border: 1px solid white;
+}
