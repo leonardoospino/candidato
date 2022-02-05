@@ -29,7 +29,7 @@ $consulta = (
       "JOIN municipio m ON m.municipio_cod = b.municipio_cod " .
       "JOIN dpto d ON d.dpto_cod = m.dpto_cod " .
       "JOIN pais p ON p.pais_cod = d.pais_cod " .
-  "WHERE a.cedula_lider = '$cedula_lider' " .
+  "WHERE a.cedula_lider = '$cedula_lider' AND a.estado = 1 " .
   "GROUP BY m.municipio " .
   "ORDER BY m.municipio ASC"
 );
