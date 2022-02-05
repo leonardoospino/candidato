@@ -72,12 +72,12 @@
           <?php foreach($amigosPorMunicipios as $amigosPorMunicipio) { ?>
             <table class="tablaResultado">
               <tr>
-                <th colspan="4">
+                <th colspan="4" class="texto35 errorTexto">
                   <?= $amigosPorMunicipio['pais'] ?>
                 </th>
               </tr>
               <tr>
-                <th colspan="4">
+                <th colspan="4" class="texto30">
                   <?= $amigosPorMunicipio['dpto'] ?>
                 </th>
               </tr>

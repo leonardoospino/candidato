@@ -12,6 +12,15 @@
   font-size: 36px;
 }
 
+.contenedorInformesMenu li {
+  margin-bottom: 20px;
+}
+
+.contenedorInformesMenu li a{
+  font-size: 40px;
+}
+
+
 .tablaResultado {
   border: 1px solid white;
   border-collapse: collapse;
@@ -33,4 +42,26 @@ th {
 
 .columnaBorderInferior > td {
   border-bottom: 1px solid gray;
+}
+
+.textoCentrado {
+  text-align: center;
+}
+
+.tituloTabla {
+  font-size: 46px !important;
+  font-weight: lighter;
+}
+
+.texto35 {
+  font-size: 35px !important;
+}
+
+
+.texto40 {
+  font-size: 40px !important;
+}
+
+.texto30 {
+  font-size: 30px !important;
 }

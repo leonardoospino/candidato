@@ -68,7 +68,7 @@
 
       <div class="login-box">
         <h1>Informe Líder</h1>
-        <p class="letraNormal m-0">
+        <p class="texto40 errorTexto m-0">
           <?= $_SESSION['usuarioNombreCompleto'] ?>
         </p>
         <p class="letraNormal m-0">
