@@ -66,7 +66,7 @@
     <div id="portada" align="center">
 
       <div class="login-box">
-        <h1>Listado de amigos por municipios</h1>
+        <h1>Listado de amigos por municipio</h1>
 
         <div class="contenedorResultados">
           <?php foreach($amigosPorMunicipios as $amigosPorMunicipio) { ?>
@@ -86,7 +86,7 @@
                   <?= $amigosPorMunicipio['municipio'] ?>
                 </th>
               </tr>
-              <tr>
+              <tr class="ancho25">
                 <th>Cédula</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
@@ -94,78 +94,13 @@
               </tr>
 
               <?php foreach ($amigosPorMunicipio['amigos'] as $amigo) { ?>
-                <tr>
+                <tr class="columnaBorderInferior">
                   <td><?= $amigo['cedula'] ?></td>
                   <td><?= $amigo['nombre'] ?></td>
                   <td><?= $amigo['apellidos'] ?></td>
                   <td><?= $amigo['barrio'] ?></td>
                 </tr>
               <?php } ?>
-
-<?php foreach ($amigosPorMunicipio['amigos'] as $amigo) { ?>
-  <tr>
-    <td><?= $amigo['cedula'] ?></td>
-    <td><?= $amigo['nombre'] ?></td>
-    <td><?= $amigo['apellidos'] ?></td>
-    <td><?= $amigo['barrio'] ?></td>
-  </tr>
-<?php } ?>
-
-<?php foreach ($amigosPorMunicipio['amigos'] as $amigo) { ?>
-  <tr>
-    <td><?= $amigo['cedula'] ?></td>
-    <td><?= $amigo['nombre'] ?></td>
-    <td><?= $amigo['apellidos'] ?></td>
-    <td><?= $amigo['barrio'] ?></td>
-  </tr>
-<?php } ?>
-
-<?php foreach ($amigosPorMunicipio['amigos'] as $amigo) { ?>
-  <tr>
-    <td><?= $amigo['cedula'] ?></td>
-    <td><?= $amigo['nombre'] ?></td>
-    <td><?= $amigo['apellidos'] ?></td>
-    <td><?= $amigo['barrio'] ?></td>
-  </tr>
-<?php } ?>
-
-
-
-<?php foreach ($amigosPorMunicipio['amigos'] as $amigo) { ?>
-                <tr>
-                  <td><?= $amigo['cedula'] ?></td>
-                  <td><?= $amigo['nombre'] ?></td>
-                  <td><?= $amigo['apellidos'] ?></td>
-                  <td><?= $amigo['barrio'] ?></td>
-                </tr>
-              <?php } ?>
-
-<?php foreach ($amigosPorMunicipio['amigos'] as $amigo) { ?>
-  <tr>
-    <td><?= $amigo['cedula'] ?></td>
-    <td><?= $amigo['nombre'] ?></td>
-    <td><?= $amigo['apellidos'] ?></td>
-    <td><?= $amigo['barrio'] ?></td>
-  </tr>
-<?php } ?>
-
-<?php foreach ($amigosPorMunicipio['amigos'] as $amigo) { ?>
-  <tr>
-    <td><?= $amigo['cedula'] ?></td>
-    <td><?= $amigo['nombre'] ?></td>
-    <td><?= $amigo['apellidos'] ?></td>
-    <td><?= $amigo['barrio'] ?></td>
-  </tr>
-<?php } ?>
-
-<?php foreach ($amigosPorMunicipio['amigos'] as $amigo) { ?>
-  <tr>
-    <td><?= $amigo['cedula'] ?></td>
-    <td><?= $amigo['nombre'] ?></td>
-    <td><?= $amigo['apellidos'] ?></td>
-    <td><?= $amigo['barrio'] ?></td>
-  </tr>
-<?php } ?>
 
             </table>
             <br/>

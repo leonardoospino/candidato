@@ -1,5 +1,6 @@
 .login-box {
   margin-top: 0;
+  padding-top: 25px;
 }
 
 .m-0 {
@@ -19,9 +20,17 @@
 }
 
 td, th {
-  padding: 3px;
+  padding: 5px;
 }
 
 th {
   border: 1px solid white;
+}
+
+.ancho25 > th {
+  width: 25% !important;
+}
+
+.columnaBorderInferior > td {
+  border-bottom: 1px solid gray;
 }
