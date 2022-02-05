@@ -56,6 +56,10 @@
         </p>
         <!-- <p class="letraNormal">Gracias por ser parte de nuestra red de lideres.</p> -->
 
+        <br><br>
+        <p class="texto40 m-0">
+          Informes
+        </p>
         <div class="contenedorInformesMenu">
           <ul>
             <!--
@@ -88,6 +92,26 @@
             <li>
               <a href="../../controlador/lider/exportar_listado_amigos.php">
                 Exportar listado de amigos
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <br><br>
+        <p class="texto40 m-0">
+          Consultas
+        </p>
+
+        <div class="contenedorInformesMenu">
+          <ul>
+            <li>
+              <a href="./estadisticas_lider.php">
+                Por cédula
+              </a>
+            </li>
+            <li>
+              <a href="./listado_amigos_lider.php">
+                Por nombre
               </a>
             </li>
           </ul>

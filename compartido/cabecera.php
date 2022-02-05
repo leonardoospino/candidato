@@ -9,10 +9,10 @@
 
 <header>
   <div id="botones">
-    <a
-      href="<?= $sitioBase ?>"
-    >
-      <button name="boton1" class="boton">Inicio</button>
+    <a href="<?= $sitioBase ?>">
+      <button name="boton1" class="boton">
+        Inicio
+      </button>
     </a>
 
     <a href="tel:+573125817322">
@@ -33,7 +33,9 @@
       )
     ) { ?>
       <a href="<?= $sitioBase ?>/vistas/lider/informe_lider.php">
-        <button name="boton4" class="boton">Volver</button>
+        <button name="boton4" class="boton fondoRojo">
+          Volver
+        </button>
       </a>
 
     <?php } else { ?>

@@ -1,55 +1,59 @@
 body {
-	background-color: #000000;
-	font-family: sans-serif, Century Gothic;
-	margin-left: auto;
-	margin-right: auto;
+  background-color: #000000;
+  font-family: sans-serif, Century Gothic;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-	body,td,th {
-	color: #FFFFFF;
+  body,td,th {
+  color: #FFFFFF;
 }
 .pikachoose a, #fancybox-close, .fancyimage {
-	border-bottom: 0px dotted #FFFFFF;
+  border-bottom: 0px dotted #FFFFFF;
 }
 
 #container {
-	height: 1230px;
-	width: 750px;
-	margin-left: auto;
-	margin-right: auto;
-	display: inherit;
+  height: 1230px;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inherit;
 }
 
 .boton {
-	margin-left: 19px;
-	margin-right: auto;
-	width: 160px;
-	height: 45px;
-	margin-top: 3px;
-	font-size: 24px;
-	text-shadow: 0 0 1px;
-	cursor: pointer;
-	background-color: #465064;
-	color: #FFFFFF;
-	border-radius: 7px;
+  margin-left: 19px;
+  margin-right: auto;
+  width: 160px;
+  height: 45px;
+  margin-top: 3px;
+  font-size: 24px;
+  text-shadow: 0 0 1px;
+  cursor: pointer;
+  background-color: #465064;
+  color: #FFFFFF;
+  border-radius: 7px;
+}
+
+.fondoRojo {
+  background-color: red !important;
 }
 
 a:hover {
 }
 
 #botones {
-	width: 750px;
-	height: 55px;
-	margin-left: auto;
-	margin-right: auto;
+  width: 750px;
+  height: 55px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #menu {
-	height: 1171px;
-	width: 	750px;
-	float: left;
-	background-color: #ffffff;
+  height: 1171px;
+  width:   750px;
+  float: left;
+  background-color: #ffffff;
 }
 
 .accion {
-	cursor: pointer;
+  cursor: pointer;
 }
