@@ -105,12 +105,12 @@
         <div class="contenedorInformesMenu">
           <ul>
             <li>
-              <a href="./estadisticas_lider.php">
+              <a href="./consulta_por_cedula.php">
                 Por cédula
               </a>
             </li>
             <li>
-              <a href="./listado_amigos_lider.php">
+              <a href="./consulta_por_nombre.php">
                 Por nombre
               </a>
             </li>
@@ -120,6 +120,16 @@
         <p class="texto40 m-0">
           Eliminar Amigo
         </p>
+
+        <div class="contenedorInformesMenu">
+          <ul>
+            <li>
+              <a href="./estadisticas_lider.php">
+                Borrar registro
+              </a>
+            </li>
+          </ul>
+        </div>
 
       </div>
       <!-- FIN LOGIN -->

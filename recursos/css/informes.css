@@ -69,3 +69,12 @@ th {
 .mt-45 {
   margin-top: 45px !important;
 }
+
+.tablaTextoIzquierda tr th{
+  text-align: start;
+  font-weight: normal;
+}
+
+.ancho30 {
+  width: 30%;
+}
