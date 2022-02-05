@@ -96,10 +96,6 @@
       <!-- FIN LOGIN -->
 
     </div>
-
-
-  <script src="../../recursos/js/lider.js"></script>
-
 </body>
 
 </html>

@@ -33,13 +33,13 @@
       )
     ) { ?>
       <a href="<?= $sitioBase ?>/vistas/lider/informe_lider.php">
-        <button name="boton4" class="boton">Volver X</button>
+        <button name="boton4" class="boton">Volver</button>
       </a>
 
     <?php } else { ?>
       <a href="<?= $sitioBase ?>/vote-asi.php">
         <button name="boton4" class="boton">
-          Vote Así X
+          Vote Así
         </button>
       </a>
     <?php } ?>
