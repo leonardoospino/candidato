@@ -15,7 +15,7 @@
 .tablaResultado {
   border: 1px solid white;
   border-collapse: collapse;
-  font-size: 25px;
+  font-size: 25px !important;
   width: 100%;
 }
 
