@@ -80,6 +80,26 @@
           <table class="tablaResultado tablaTextoIzquierda">
 
           </table>
+
+          <br>
+          <input
+            type="hidden"
+            id="sitioEditar"
+            value="<?= (
+              $_SERVER['REQUEST_SCHEME'] .
+              '://' .
+              $_SERVER['SERVER_NAME'] .
+              '/vistas/amigo/editar_amigo.php' .
+              '?cedula='
+            ) ?>"
+          >
+          <input type="hidden" id="cedulaEncontrada">
+          <input
+            class="botonSiguiente"
+            type="button"
+            value="Editar Amigo"
+            id="editarAmigo"
+          >
         </div>
         <br>
         <br>

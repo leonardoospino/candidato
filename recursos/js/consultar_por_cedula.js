@@ -2,6 +2,10 @@ var dBuscarPorCedula = (
   document
   .querySelector('#buscarPorCedula')
 );
+var dEditarAmigo = (
+  document
+  .querySelector('#editarAmigo')
+);
 var dCedula = (
   document
   .querySelector('#cedula')
@@ -17,6 +21,10 @@ var dResultadoContenedor = (
 var dTablaResultado = (
   document
   .querySelector('.tablaResultado')
+);
+var dCedulaEncontrada = (
+  document
+  .querySelector('#cedulaEncontrada')
 );
 
 function validarCedula() {
@@ -49,6 +57,7 @@ function consultarPorCedula() {
       success: function(amigo) {
         console.log(amigo);
         if (amigo['cedula'] !== undefined) {
+          dCedulaEncontrada.value = amigo.cedula;
           dResultadoContenedor.classList.remove('ocultar');
 
           var tablaContenido = (
@@ -152,5 +161,24 @@ function consultarPorCedula() {
   .addEventListener(
     'click',
     consultarPorCedula
+  )
+);
+
+function editarAmigo() {
+  window.location.href = (
+    (
+      document
+      .querySelector('#sitioEditar')
+      .value
+    ) +
+    dCedulaEncontrada.value
+  );
+}
+
+(
+  dEditarAmigo
+  .addEventListener(
+    'click',
+    editarAmigo
   )
 );

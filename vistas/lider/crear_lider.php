@@ -121,10 +121,10 @@
             id="digitarClave"
             class="ocultar"
           >
-            <p class="letraNormal" id="claveAvisoIniciarSesion">
+            <p class="letraNormal ocultar" id="claveAvisoIniciarSesion">
               Digite la contraseña
             </p>
-            <p class="letraNormal" id="claveAvisoRegistrarte">
+            <p class="letraNormal ocultar" id="claveAvisoRegistrarte">
               Digite la contraseña y su confirmación para crearse como líder
             </p>
             <input
@@ -137,7 +137,7 @@
             >
 
             <input
-              type="password"
+              type="hidden"
               name="clave_confirmacion"
               id="clave_confirmacion"
               class="entradaFormulario"

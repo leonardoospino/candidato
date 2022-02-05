@@ -1,3 +1,17 @@
+<?php include '../../controlador/amigo/obtener_amigo.php' ?>
+
+<input
+  type="hidden"
+  id="amigo"
+  data-pais="<?= $amigo['pais_cod'] ?>"
+  data-dpto="amigoDpto"
+  value="<?= $amigo['dpto_cod'] ?>"
+  data-municipio="<?= $amigo['municipio_cod'] ?>"
+  data-barrio="<?= $amigo['barrio_cod'] ?>"
+  data-puesto="<?= $amigo['puesto_cod'] ?>"
+  data-mesa="<?= $amigo['mesa'] ?>"
+>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -47,14 +61,14 @@
             <span class="textoSuperior1 ocultar" id="textoPais">COLOMBIA</span><span class="ocultar textoSuperior1" id="textoDpto"></span>
           </h2>
           <h2 class="ocultar textoSuperior1" id="textoMunicipio"></h2>
-          <p style="font-size: 22pt;">DIGITE:</p>
+          <p style="font-size: 22pt;">ACTUALICE CAMPOS:</p>
           <hr/>
           <br>
           <br>
 
         <form
-          action="../../controlador/amigo/almacenar_amigo.php"
-          id="formularioCrearAmigo"
+          action="../../controlador/amigo/actualizar_amigo.php"
+          id="formularioEditarAmigo"
           method="post"
           autocomplete="off"
         >
@@ -74,7 +88,7 @@
                   <option
                     data-texto-pais="<?= $p['pais'] ?>"
                     value="<?= $p['pais_cod'] ?>"
-                    <?= ($p['pais'] === 'COLOMBIA')? 'selected' : '' ?>
+                    <?= ($p['pais_cod'] === $amigo['pais_cod'])? 'selected' : '' ?>
                   >
                     <?= utf8_encode($p['pais']) ?> (<?= $p['indicativo_pais'] ?>)
                   </option>
@@ -94,7 +108,7 @@
               class="entradaFormulario"
               type="hidden"
               name="cedula_lider"
-              value="<?= $_GET['cedula_lider'] ?>"
+              value="<?= $amigo['cedula_lider'] ?>"
             >
 
             <input
@@ -103,6 +117,7 @@
               name="nombre"
               id="nombre"
               placeholder="Nombre"
+              value="<?= $amigo['nombre'] ?>"
               required
             >
 
@@ -112,6 +127,7 @@
               name="apellidos"
               id="apellidos"
               placeholder="Apellidos"
+              value="<?= $amigo['apellidos'] ?>"
               required
             >
 
@@ -126,6 +142,7 @@
                   name="genero"
                   id="genero"
                   value="1"
+                  <?= ($amigo['genero'] == 1)? 'checked' : '' ?>
                 >
               </label>
 
@@ -137,6 +154,7 @@
                   name="genero"
                   id="genero"
                   value="0"
+                  <?= ($amigo['genero'] == 0)? 'checked' : '' ?>
                 >
               </label>
 
@@ -148,6 +166,7 @@
                   name="genero"
                   id="genero"
                   value="2"
+                  <?= ($amigo['genero'] == 2)? 'checked' : '' ?>
                 >
               </label>
             </div>
@@ -158,6 +177,7 @@
               name="celular"
               id="celular"
               placeholder="Celular de contacto"
+              value="<?= $amigo['celular'] ?>"
             >
 
             <input
@@ -166,6 +186,7 @@
               name="telefono"
               id="telefono"
               placeholder="Teléfono"
+              value="<?= $amigo['telefono'] ?>"
             >
 
             <input
@@ -173,6 +194,7 @@
               type="email"
               name="email"
               placeholder="E-mail"
+              value="<?= $amigo['email'] ?>"
             >
 
             <p style="font-size: 22pt;">Fecha de nacimiento</p>
@@ -182,6 +204,7 @@
               id="fecha_nac"
               name="fecha_nac"
               placeholder="Fecha de Nacimiento"
+              value="<?= $amigo['fecha_nac'] ?>"
               required
             >
 
@@ -251,6 +274,7 @@
               type="text"
               name="direccion"
               placeholder="Dirección"
+              value="<?= $amigo['direccion'] ?>"
               id="direccion"
             >
 
@@ -326,6 +350,7 @@
                   name="puede_votar"
                   id="puede_votar"
                   value="1"
+                  <?= ($amigo['puede_votar'] == 1)? 'checked' : '' ?>
                 >
               </label>
 
@@ -337,6 +362,7 @@
                   name="puede_votar"
                   id="puede_votar"
                   value="0"
+                  <?= ($amigo['puede_votar'] == 0)? 'checked' : '' ?>
                 >
 
               </label>
@@ -360,6 +386,7 @@
                   name="jurado"
                   id="jurado"
                   value="1"
+                  <?= ($amigo['jurado'] == 1)? 'checked' : '' ?>
                 >
               </label>
 
@@ -371,6 +398,7 @@
                   name="jurado"
                   id="jurado"
                   value="0"
+                  <?= ($amigo['jurado'] == 0)? 'checked' : '' ?>
                 >
 
               </label>
@@ -387,6 +415,7 @@
                   name="testigo"
                   id="testigo"
                   value="1"
+                  <?= ($amigo['testigo'] == 1)? 'checked' : '' ?>
                 >
               </label>
 
@@ -398,6 +427,7 @@
                   name="testigo"
                   id="testigo"
                   value="0"
+                  <?= ($amigo['testigo'] == 0)? 'checked' : '' ?>
                 >
 
               </label>
@@ -405,22 +435,6 @@
 
             <br>
             <hr>
-            <br>
-
-            <div>
-              <h2>
-                <a href="../../manejo_datos.php" target="_blank">Toca Aquí</a> <span id="restanteTocaAqui">para leer términos de manejo de datos.<span>
-              </h2>
-
-            </div>
-
-            <div class="manejoDatos">
-              <input type="checkbox" id="manejoDatosMarcable">
-              <h2><a href="../../manejo_datos.php" target="_blank">Acepto el manejo de datos</a>
-              </h2>
-
-            </div>
-
             <br><br><br>
 
 
@@ -437,11 +451,12 @@
                 class="botonSiguiente"
                 id="siguientePuestoVotacion"
                 type="button"
-                value="Registrarte"
+                value="Actualizar"
               >
             </div>
           </div>
         </form>
+        <br><br>
       </div>
 
 		</div>
@@ -449,7 +464,7 @@
 
 	</div>
 
-  <script src="../../recursos/js/crear_amigo.js"></script>
+  <script src="../../recursos/js/editar_amigo.js"></script>
 </body>
 
 </html>

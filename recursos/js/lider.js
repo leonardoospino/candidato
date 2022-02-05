@@ -45,6 +45,7 @@ validarCedulaBotonSiguiente.addEventListener(
       url: `../../controlador/lider/existe_cedula_amigo_json.php`,
       dataType: 'JSON',
       data: datosPeticion,
+      async: false,
       success: function(respuesta) {
         if (!respuesta.existe) {
           errorCedulaAmigo.classList.remove('ocultar');
@@ -59,15 +60,18 @@ validarCedulaBotonSiguiente.addEventListener(
             url: `../../controlador/lider/existe_cedula_lider_json.php`,
             dataType: 'JSON',
             data: datosPeticion,
+            async: false,
             success: function(respuestaLider) {
 
               if (respuestaLider.existe) { //OCULTAR confirmar contraseña
-                document.querySelector('#claveAvisoRegistrarte').classList.add('ocultar');
-                campoClaveConfirmacion.required = false;
                 campoClaveConfirmacion.type = 'hidden';
+                campoClaveConfirmacion.required = false;
                 formularioLider.action = '../../controlador/lider/iniciar_sesion.php';
                 document.querySelector('#botonRegistrarte').classList.add('ocultar');
+                document.querySelector('#claveAvisoRegistrarte').classList.add('ocultar');
               } else {
+                document.querySelector('#claveAvisoRegistrarte').classList.remove('ocultar');
+                campoClaveConfirmacion.type = 'password';
                 document.querySelector('#claveAvisoIniciarSesion').classList.add('ocultar');
                 document.querySelector('#botonIniciarSesion').classList.add('ocultar');
                 formularioLider.action = '../../controlador/lider/almacenar_lider.php';
