@@ -267,6 +267,7 @@
               name="barrio_opcional"
               placeholder="Digite el nombre del barrio"
               id="barrio_opcional"
+              value="<?= $amigo['barrio_opcional'] ?>"
             >
 
             <input

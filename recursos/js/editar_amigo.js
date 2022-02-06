@@ -118,6 +118,7 @@ document.querySelector('#anteriorDireccion').addEventListener(
 function validarDireccionDatos() {
   var datosValidos = true;
   if (listaBarrios[listaBarrios.selectedIndex].innerText == 'Barrio no encontrado') {
+    console.log(listaBarrios[listaBarrios.selectedIndex].innerText);
     if (campoBarrioOpcional.value.trim().length == 0) {
       campoBarrioOpcional.classList.add('error');
       datosValidos = false;
