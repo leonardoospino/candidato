@@ -26,10 +26,12 @@
     }
 
     .login-box {
-      margin-top: 150px;
+      margin-top: 30px;
     }
   </style>
 
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
 </head>
 
 <body>
@@ -46,7 +48,7 @@
       <div class="login-box">
         <img src="../../recursos/img/logo.jpg" class="avatar" alt="Avatar Image">
         <h1>Registro Amigo(a)</h1>
-        <p class="letraNormal">Gracias por ser parte de nuestra red de amigos.</p>
+        <p class="letraNormal m-0">Gracias por ser parte de nuestra red de amigos.</p>
         <br><br><br>
 
         <!-- EVITAR QUE LOS CAMPOS AUTCOMPLETEN -->
@@ -56,7 +58,7 @@
           method="POST"
           autocomplete="off"
         >
-          <p class="letraNormal">Digite su cédula:</p>
+          <p class="letraNormal mt-0 mb-10">Digite su cédula:</p>
           <input
             type="number"
             name="cedula"
@@ -66,14 +68,84 @@
             required
           >
 
-          <p class="letraNormal">Digite la cédula del líder</p>
+          <div class="opcionRadio">
+            <h2 id="textoJurado">¿Tiene líder? </h2>
+            <label for="">
+              Si
+              <input
+                class="entradaRadio jsTieneLider"
+                type="radio"
+                name="tieneLider"
+                value="1"
+              >
+            </label>
+
+            <label for="">
+              No
+              <input
+                class="entradaRadio jsTieneLider"
+                type="radio"
+                name="tieneLider"
+                value="0"
+                checked
+              >
+
+            </label>
+          </div>
+
+
+          <?php include '../../controlador/amigo/cargar_lider_predeterminado.php' ?>
+
           <input
-            type="number"
+            type="hidden"
+            class="jsCedulaNoTieneLider"
+            value="<?= $lider['cedula'] ?>"
+          />
+
+          <input
+            type="hidden"
             name="cedula_lider"
-            id="cedula_lider"
-            class="entradaFormulario"
-            placeholder="Cédula sin puntos ni comas"
-          >
+            class="jsCedulaLider"
+            value="<?= $lider['cedula'] ?>"
+          />
+
+          <div class="noTieneLider ocultar">
+            <br>
+            <p class="letraNormal mt-0 mb-10">
+              Digite el nombre del líder
+            </p>
+            <input
+              type="text"
+              name="cedulaLiderAux"
+              id="cedulaLiderAux"
+              class="entradaFormulario"
+              placeholder="Nombre del líder"
+            >
+
+            <input
+              class="botonSiguiente jsBuscarLideres"
+              type="button"
+              value="Buscar Líder"
+            />
+
+            <br><br>
+            <select
+              class="entradaFormulario"
+              id="selectLideres"
+              required
+            >
+              <optgroup label="Selecciona un Líder:" >
+              </optgroup>
+            </select>
+
+            <table
+              class="tablaResultado tablaTextoIzquierda"
+            >
+            </table>
+          </div>
+
+
+          <br>
 
           <input class="botonSiguiente" type="submit" value="Entrar">
         </form>
@@ -85,7 +157,7 @@
 
   </div>
 
-  <script src="../../recursos/js/instrucciones.js"></script>
+  <script src="../../recursos/js/cedula_amigo.js"></script>
 
 </body>
 
